@@ -1,15 +1,20 @@
-import React from "react";
-import { Logo, Menu, MenuLink, Nav } from "./Navbar.style";
+import React, { useState } from "react";
+import { HamburgerIcon, Logo, Menu, MenuLink, Nav } from "./Navbar.style";
+import { menuIcon } from "../../helper/iconData";
 
 const Navbar = () => {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <Nav justify="space-between" wrap="wrap">
       <Logo>ONLINE LIBRARY</Logo>
-      <Menu>
-        <MenuLink href="#">HOME</MenuLink>
-        <MenuLink href="#">ABOUT</MenuLink>
-        <MenuLink href="#">REGISTER</MenuLink>
-        <MenuLink href="#">LOGIN</MenuLink>
+      <HamburgerIcon onClick={() => setShowMenu(!showMenu)}>
+        {menuIcon}
+      </HamburgerIcon>
+      <Menu showMenu={showMenu}>
+        <MenuLink to="/">HOME</MenuLink>
+        <MenuLink to="/about">ABOUT</MenuLink>
+        <MenuLink to="/register">REGISTER</MenuLink>
+        <MenuLink to="/login">LOGIN</MenuLink>
       </Menu>
     </Nav>
   );
