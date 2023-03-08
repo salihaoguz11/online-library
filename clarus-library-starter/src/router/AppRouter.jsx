@@ -9,7 +9,9 @@ import Register from "../pages/register/Register";
 import PrivateRouter from "./PrivateRouter";
 
 const AppRouter = () => {
-  const [currentUser, setCurrentUser] = useState("saliha");
+  const [currentUser, setCurrentUser] = useState(
+    sessionStorage.getItem("user")
+  );
   return (
     <BrowserRouter>
       <Navbar currentUser={currentUser} setCurrentUser={setCurrentUser} />

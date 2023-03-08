@@ -8,6 +8,7 @@ export const LoginContainer = styled(Flex)`
   background-size: cover;
   background-position: center;
 `;
+
 export const FormContainer = styled(Flex)`
   width: 40rem;
   height: 40rem;
@@ -15,6 +16,7 @@ export const FormContainer = styled(Flex)`
   padding: 0.5rem;
   flex-direction: column;
 `;
+
 export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;

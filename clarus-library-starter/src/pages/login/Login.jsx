@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import {
   FormContainer,
   Header,
@@ -8,23 +7,26 @@ import {
   StyledForm,
   StyledInput,
 } from "./Login.style";
+import { useNavigate } from "react-router-dom";
 
 const Login = ({ setCurrentUser }) => {
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setCurrentUser("saliha");
-    sessionStorage.setItem("user", "saliha");
+    setCurrentUser("anthony");
+    sessionStorage.setItem("user", "anthony");
     navigate(-1);
   };
+
   return (
     <LoginContainer>
       <FormContainer>
-        <Header>LOGIN HERE</Header>
+        <Header>Login Here</Header>
         <StyledForm onSubmit={handleSubmit}>
-          <StyledInput type="text" required />
-          <StyledInput type="password" required />
-          <StyledButton type="submit">LOGIN</StyledButton>
+          <StyledInput type="text" placeholder="Username" required />
+          <StyledInput type="password" placeholder="Password" required />
+          <StyledButton type="submit">Login</StyledButton>
         </StyledForm>
       </FormContainer>
     </LoginContainer>
