@@ -8,13 +8,18 @@ import {
   SelectBox,
 } from "./Header.style";
 
-const Header = ({ setSelectType, setQuery }) => {
+const Header = ({ setSelectType, setQuery, getData }) => {
   const printType = ["all", "books", "magazines"];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    getData();
+  };
 
   return (
     <HeaderContainer>
       <HeaderTitle>Books or magazines</HeaderTitle>
-      <HeaderForm>
+      <HeaderForm onSubmit={handleSubmit}>
         <SearchInput
           type="text"
           placeholder="name"

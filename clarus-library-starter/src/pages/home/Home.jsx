@@ -20,12 +20,14 @@ const Home = () => {
       console.log(error);
     }
   };
-  useEffect(() => {
-    getData();
-  }, []);
+
   return (
     <HomeContainer>
-      <Header setQuery={setQuery} setSelectType={setSelectType} />
+      <Header
+        setQuery={setQuery}
+        setSelectType={setSelectType}
+        getData={getData}
+      />
       <HomeImg>
         <img src={homeImg} alt="home" />
       </HomeImg>
