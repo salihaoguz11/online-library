@@ -16,6 +16,7 @@ const Home = () => {
     try {
       const { data } = await axios(url);
       console.log(data);
+      setMyData(data.items);
     } catch (error) {
       console.log(error);
     }
@@ -28,12 +29,18 @@ const Home = () => {
         setSelectType={setSelectType}
         getData={getData}
       />
-      <HomeImg>
-        <img src={homeImg} alt="home" />
-      </HomeImg>
-      <MainContainer>
-        <Card />
-      </MainContainer>
+
+      {!myData.length ? (
+        <HomeImg>
+          <img src={homeImg} alt="home" />
+        </HomeImg>
+      ) : (
+        <MainContainer wrap="wrap">
+          {myData.map((item) => (
+            <Card key={item.id} item={item} />
+          ))}
+        </MainContainer>
+      )}
     </HomeContainer>
   );
 };
