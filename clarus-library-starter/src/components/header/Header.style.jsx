@@ -15,7 +15,7 @@ export const HeaderTitle = styled.h2`
 
 export const HeaderForm = styled.form`
   display: flex;
-  width: 45%;
+  width: 100%;
   flex-wrap: wrap;
   justify-content: center;
   background: ${({ theme }) => theme.colors.headerFormColor};
