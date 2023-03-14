@@ -1,8 +1,5 @@
 import React from "react";
-import { AboutContainer, IconContainer, InfoContainer } from "./About.style";
-import profile from "../../assets/about.png";
-import Icon from "../../components/icon/Icon";
-import { iconData } from "../../helper/iconData";
+import { AboutContainer, InfoContainer } from "./About.style";
 
 const About = () => {
   return (

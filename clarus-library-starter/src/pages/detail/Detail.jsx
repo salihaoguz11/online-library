@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import defaultImg from "../../assets/book.jpg";
 import {
   Description,
@@ -11,7 +11,7 @@ import {
 
 const Detail = () => {
   const { state } = useLocation();
-  const { id } = useParams();
+  // const { id } = useParams();
   return (
     <DetailContainer>
       <DetailTitle>{state.volumeInfo.title}</DetailTitle>

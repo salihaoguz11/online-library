@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Card from "../../components/card/Card";
 import Header from "../../components/header/Header";
 import { HomeContainer, HomeImg, MainContainer } from "./Home.style";
